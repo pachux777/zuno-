@@ -264,7 +264,7 @@ export default function App() {
     if (!n || isNaN(a)) { alert("Fill all fields"); return; }
     if (a < 18) { alert("18+ only"); return; }
 
-    const socket = io({ path: `${BASE}/api/socket.io` });
+    const socket = io("https://zuno-i4ej.onrender.com");
     socketRef.current = socket;
 
     socket.on("users_count", (count: number) => setOnlineUsers(count));
